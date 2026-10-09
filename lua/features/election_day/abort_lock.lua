@@ -1,12 +1,9 @@
--- election_day_abort_lock.lua
--- This file only patches the abort dialog to prevent cancelling Election Day on day 1.
-
 if RequiredScript ~= "lib/managers/menumanager" then
     return
 end
 
 if ModPath and not rawget(_G, "DrawTriggerVisualShared") then
-    pcall(dofile, ModPath .. "lua/visual_shared.lua")
+    pcall(dofile, ModPath .. "lua/core/visual_shared.lua")
 end
 
 local Shared = rawget(_G, "DrawTriggerVisualShared")

@@ -1,5 +1,5 @@
 if ModPath and not rawget(_G, "DrawTriggerVisualShared") then
-    pcall(dofile, ModPath .. "lua/visual_shared.lua")
+    pcall(dofile, ModPath .. "lua/core/visual_shared.lua")
 end
 
 local STATE_VERSION = 21
@@ -315,6 +315,7 @@ if not state then
         "sound_event"
     }
 
+    -- Chat reporting and display state
     local function push_chat(prefix, message)
         if managers and managers.chat and tweak_data and tweak_data.system_chat_color then
             managers.chat:_receive_message(1, prefix, message, tweak_data.system_chat_color)
@@ -519,6 +520,7 @@ if not state then
 
     sync_state_settings()
 
+    -- Mission element and geometry helpers
     local function copy_array(list)
         local result = {}
 
@@ -1359,6 +1361,7 @@ if not state then
         end
     end
 
+    -- Mission element discovery and trigger analysis
     local function get_editor_name(element)
         if not element then
             return "unnamed"
@@ -2073,6 +2076,7 @@ if not state then
         return false
     end
 
+    -- Zone labels and event messages
     local function friendly_reason(reason)
         if reason == "enemy_spawn" then
             return L("hvt_trigger_vis_reason_enemy_spawn")
@@ -2488,6 +2492,7 @@ if not state then
         return table.concat(parts, " | ")
     end
 
+    -- Build and refresh the zone cache
     local function append_unique_string(list, seen, value)
         if not value or seen[value] then
             return

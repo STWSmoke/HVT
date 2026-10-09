@@ -1,25 +1,22 @@
 {
 	"name": "HVT (Heist Visualization Tools)",
-	"description": "Divers outils pour rush/speedrun/debug",
+	"description": "hvt_mod_description",
 	"author": "STW__Smoke",
-	"version": "1.3.2",
+	"version": "1.4.0",
 	"blt_version" : 2.0,
+	"contact" : "discord : stw__smoke",
 	"hooks" : [
 	{
 		"hook_id" : "lib/managers/menumanager",
-		"script_path" : "lua/trigger_vis_menu.lua"
+		"script_path" : "lua/features/visualization/menu.lua"
 	},
 	{
 		"hook_id" : "lib/managers/menumanager",
-		"script_path" : "lua/fps_cap_shared.lua"
+		"script_path" : "lua/features/automation/fps_cap.lua"
 	},
 	{
 		"hook_id" : "lib/managers/menumanager",
-		"script_path" : "lua/fps_cap_menu.lua"
-	},
-	{
-		"hook_id" : "lib/managers/menumanager",
-		"script_path" : "lua/no_slow_announcement.lua"
+		"script_path" : "lua/features/automation/no_slow_announcement.lua"
 	},
 	{
 		"hook_id" : "lib/managers/localizationmanager",
@@ -27,31 +24,43 @@
 	},
 	{
 		"hook_id" : "lib/managers/menumanager",
-		"script_path" : "lua/car_shop_name.lua"
+		"script_path" : "lua/features/maps/map_names.lua"
 	},
 	{
 		"hook_id" : "lib/managers/menumanager",
-		"script_path" : "lua/big_bank_name.lua"
+		"script_path" : "lua/features/election_day/abort_lock.lua"
 	},
 	{
-		"hook_id" : "lib/managers/menumanager",
-		"script_path" : "lua/election_day_abort_lock.lua"
+		"hook_id" : "lib/units/beings/player/states/playerstandard",
+		"script_path" : "lua/features/election_day/vote_counter.lua"
+	},
+	{
+		"hook_id" : "lib/network/handlers/unitnetworkhandler",
+		"script_path" : "lua/features/election_day/vote_counter.lua"
+	},
+	{
+		"hook_id" : "lib/managers/hudmanagerpd2",
+		"script_path" : "lua/features/election_day/vote_counter.lua"
+	},
+	{
+		"hook_id" : "core/lib/managers/mission/coreelementarea",
+		"script_path" : "lua/features/first_world_bank/vent_counter.lua"
 	},
 	{
 		"hook_id" : "lib/managers/menu/items/contractbrokerheistitem",
-		"script_path" : "lua/contract_broker_auto_buy.lua"
+		"script_path" : "lua/features/automation/contract_broker_auto_buy.lua"
 	},
 	{
 		"hook_id" : "lib/managers/menu/stageendscreengui",
-		"script_path" : "lua/election_day_abort_lock.lua"
+		"script_path" : "lua/features/election_day/abort_lock.lua"
 	},
 	{
 		"hook_id" : "lib/managers/menu/stageendscreengui",
-		"script_path" : "lua/auto_skip_end_screen.lua"
+		"script_path" : "lua/features/automation/auto_skip_end_screen.lua"
 	},
 	{
 		"hook_id" : "lib/tweak_data/timespeedeffecttweakdata",
-		"script_path" : "lua/no_slow.lua"
+		"script_path" : "lua/features/automation/no_slow.lua"
 	}
 	],
 	"keybinds" : [
@@ -59,7 +68,7 @@
 		"keybind_id" : "draw",
 		"name" : "keybind_draw_name",
 		"description" : "keybind_draw_desc",
-		"script_path" : "lua/draw.lua",
+		"script_path" : "lua/features/visualization/hitbox_debug.lua",
 		"run_in_menu" : true,
 		"run_in_game" : true,
 		"localized" : true
@@ -68,7 +77,7 @@
 		"keybind_id" : "trigger_vis_toggle",
 		"name" : "keybind_trigger_vis_toggle_name",
 		"description" : "keybind_trigger_vis_toggle_desc",
-		"script_path" : "lua/trigger_vis.lua",
+		"script_path" : "lua/features/visualization/trigger_visualization.lua",
 		"run_in_menu" : true,
 		"run_in_game" : true,
 		"localized" : true
@@ -77,7 +86,7 @@
 		"keybind_id" : "fps_cap_6",
 		"name" : "keybind_fps_cap_6_name",
 		"description" : "keybind_fps_cap_6_desc",
-		"script_path" : "lua/fps_cap_6.lua",
+		"script_path" : "lua/features/automation/fps_cap.lua",
 		"run_in_menu" : true,
 		"run_in_game" : true,
 		"localized" : true
@@ -86,7 +95,7 @@
 		"keybind_id" : "fps_cap_10",
 		"name" : "keybind_fps_cap_10_name",
 		"description" : "keybind_fps_cap_10_desc",
-		"script_path" : "lua/fps_cap_10.lua",
+		"script_path" : "lua/features/automation/fps_cap.lua",
 		"run_in_menu" : true,
 		"run_in_game" : true,
 		"localized" : true
@@ -95,7 +104,7 @@
 		"keybind_id" : "fps_cap_15",
 		"name" : "keybind_fps_cap_15_name",
 		"description" : "keybind_fps_cap_15_desc",
-		"script_path" : "lua/fps_cap_15.lua",
+		"script_path" : "lua/features/automation/fps_cap.lua",
 		"run_in_menu" : true,
 		"run_in_game" : true,
 		"localized" : true
@@ -104,7 +113,7 @@
 		"keybind_id" : "fps_cap_30",
 		"name" : "keybind_fps_cap_30_name",
 		"description" : "keybind_fps_cap_30_desc",
-		"script_path" : "lua/fps_cap_30.lua",
+		"script_path" : "lua/features/automation/fps_cap.lua",
 		"run_in_menu" : true,
 		"run_in_game" : true,
 		"localized" : true
@@ -113,7 +122,7 @@
 		"keybind_id" : "fps_cap_45",
 		"name" : "keybind_fps_cap_45_name",
 		"description" : "keybind_fps_cap_45_desc",
-		"script_path" : "lua/fps_cap_45.lua",
+		"script_path" : "lua/features/automation/fps_cap.lua",
 		"run_in_menu" : true,
 		"run_in_game" : true,
 		"localized" : true
@@ -122,7 +131,7 @@
 		"keybind_id" : "fps_cap_60",
 		"name" : "keybind_fps_cap_60_name",
 		"description" : "keybind_fps_cap_60_desc",
-		"script_path" : "lua/fps_cap_60.lua",
+		"script_path" : "lua/features/automation/fps_cap.lua",
 		"run_in_menu" : true,
 		"run_in_game" : true,
 		"localized" : true
@@ -131,7 +140,7 @@
 		"keybind_id" : "fps_cap_144",
 		"name" : "keybind_fps_cap_144_name",
 		"description" : "keybind_fps_cap_144_desc",
-		"script_path" : "lua/fps_cap_144.lua",
+		"script_path" : "lua/features/automation/fps_cap.lua",
 		"run_in_menu" : true,
 		"run_in_game" : true,
 		"localized" : true
@@ -140,10 +149,20 @@
 		"keybind_id" : "fps_cap_unlim",
 		"name" : "keybind_fps_cap_unlim_name",
 		"description" : "keybind_fps_cap_unlim_desc",
-		"script_path" : "lua/fps_cap_unlim.lua",
+		"script_path" : "lua/features/automation/fps_cap.lua",
 		"run_in_menu" : true,
 		"run_in_game" : true,
 		"localized" : true
 	}
+	],
+	"updates" : [
+		{
+			"identifier" : "hvt",
+			"provider" : "meta_file",
+			"meta" : "https://raw.githubusercontent.com/STWSmoke/HVT/main/update.json",
+			"download" : "https://github.com/STWSmoke/HVT/archive/refs/heads/main.zip",
+			"patchnotes" : "https://github.com/STWSmoke/HVT/releases",
+			"install_folder" : "HVT (Heist Visualization Tools) 1.3.2"
+		}
 	]
 }

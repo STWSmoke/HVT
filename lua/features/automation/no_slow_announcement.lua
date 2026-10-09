@@ -1,5 +1,5 @@
 if ModPath and not rawget(_G, "DrawTriggerVisualShared") then
-    pcall(dofile, ModPath .. "lua/visual_shared.lua")
+    pcall(dofile, ModPath .. "lua/core/visual_shared.lua")
 end
 
 local Shared = rawget(_G, "DrawTriggerVisualShared")
@@ -71,7 +71,6 @@ Hooks:PostHook(MenuManager, "update", "DrawRework_NoSlowAnnouncement_Update", fu
             PLAYER = player_name
         })
 
-        -- Announcement:SendToLobby(message)
         Announcement.message_sent = true
     else
         Announcement.message_sent = false

@@ -1,5 +1,5 @@
 if ModPath and not rawget(_G, "DrawTriggerVisualShared") then
-    pcall(dofile, ModPath .. "lua/visual_shared.lua")
+    pcall(dofile, ModPath .. "lua/core/visual_shared.lua")
 end
 
 local Shared = rawget(_G, "DrawTriggerVisualShared")
@@ -56,12 +56,8 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_TriggerVisMenu", funct
     MenuCallbackHandler.hvt_options_toggle_fun_map_names = function(this, item)
         Shared.settings.fun_map_names_enabled = item:value() == "on"
 
-        if type(rawget(_G, "HVTApplyCarShopNameOverride")) == "function" then
-            _G.HVTApplyCarShopNameOverride()
-        end
-
-        if type(rawget(_G, "HVTApplyBigBankNameOverride")) == "function" then
-            _G.HVTApplyBigBankNameOverride()
+        if type(rawget(_G, "HVTApplyMapNameOverrides")) == "function" then
+            _G.HVTApplyMapNameOverrides()
         end
     end
 

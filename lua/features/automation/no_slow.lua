@@ -1,5 +1,5 @@
 if ModPath and not rawget(_G, "DrawTriggerVisualShared") then
-    pcall(dofile, ModPath .. "lua/visual_shared.lua")
+    pcall(dofile, ModPath .. "lua/core/visual_shared.lua")
 end
 
 local Shared = rawget(_G, "DrawTriggerVisualShared")
