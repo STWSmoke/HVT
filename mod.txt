@@ -1,0 +1,149 @@
+{
+	"name": "HVT (Heist Visualization Tools)",
+	"description": "Divers outils pour rush/speedrun/debug",
+	"author": "STW__Smoke",
+	"version": "1.3.2",
+	"blt_version" : 2.0,
+	"hooks" : [
+	{
+		"hook_id" : "lib/managers/menumanager",
+		"script_path" : "lua/trigger_vis_menu.lua"
+	},
+	{
+		"hook_id" : "lib/managers/menumanager",
+		"script_path" : "lua/fps_cap_shared.lua"
+	},
+	{
+		"hook_id" : "lib/managers/menumanager",
+		"script_path" : "lua/fps_cap_menu.lua"
+	},
+	{
+		"hook_id" : "lib/managers/menumanager",
+		"script_path" : "lua/no_slow_announcement.lua"
+	},
+	{
+		"hook_id" : "lib/managers/localizationmanager",
+		"script_path" : "lua/localization/hook_localization.lua"
+	},
+	{
+		"hook_id" : "lib/managers/menumanager",
+		"script_path" : "lua/car_shop_name.lua"
+	},
+	{
+		"hook_id" : "lib/managers/menumanager",
+		"script_path" : "lua/big_bank_name.lua"
+	},
+	{
+		"hook_id" : "lib/managers/menumanager",
+		"script_path" : "lua/election_day_abort_lock.lua"
+	},
+	{
+		"hook_id" : "lib/managers/menu/items/contractbrokerheistitem",
+		"script_path" : "lua/contract_broker_auto_buy.lua"
+	},
+	{
+		"hook_id" : "lib/managers/menu/stageendscreengui",
+		"script_path" : "lua/election_day_abort_lock.lua"
+	},
+	{
+		"hook_id" : "lib/managers/menu/stageendscreengui",
+		"script_path" : "lua/auto_skip_end_screen.lua"
+	},
+	{
+		"hook_id" : "lib/tweak_data/timespeedeffecttweakdata",
+		"script_path" : "lua/no_slow.lua"
+	}
+	],
+	"keybinds" : [
+	{
+		"keybind_id" : "draw",
+		"name" : "keybind_draw_name",
+		"description" : "keybind_draw_desc",
+		"script_path" : "lua/draw.lua",
+		"run_in_menu" : true,
+		"run_in_game" : true,
+		"localized" : true
+	},
+	{
+		"keybind_id" : "trigger_vis_toggle",
+		"name" : "keybind_trigger_vis_toggle_name",
+		"description" : "keybind_trigger_vis_toggle_desc",
+		"script_path" : "lua/trigger_vis.lua",
+		"run_in_menu" : true,
+		"run_in_game" : true,
+		"localized" : true
+	},
+	{
+		"keybind_id" : "fps_cap_6",
+		"name" : "keybind_fps_cap_6_name",
+		"description" : "keybind_fps_cap_6_desc",
+		"script_path" : "lua/fps_cap_6.lua",
+		"run_in_menu" : true,
+		"run_in_game" : true,
+		"localized" : true
+	},
+	{
+		"keybind_id" : "fps_cap_10",
+		"name" : "keybind_fps_cap_10_name",
+		"description" : "keybind_fps_cap_10_desc",
+		"script_path" : "lua/fps_cap_10.lua",
+		"run_in_menu" : true,
+		"run_in_game" : true,
+		"localized" : true
+	},
+	{
+		"keybind_id" : "fps_cap_15",
+		"name" : "keybind_fps_cap_15_name",
+		"description" : "keybind_fps_cap_15_desc",
+		"script_path" : "lua/fps_cap_15.lua",
+		"run_in_menu" : true,
+		"run_in_game" : true,
+		"localized" : true
+	},
+	{
+		"keybind_id" : "fps_cap_30",
+		"name" : "keybind_fps_cap_30_name",
+		"description" : "keybind_fps_cap_30_desc",
+		"script_path" : "lua/fps_cap_30.lua",
+		"run_in_menu" : true,
+		"run_in_game" : true,
+		"localized" : true
+	},
+	{
+		"keybind_id" : "fps_cap_45",
+		"name" : "keybind_fps_cap_45_name",
+		"description" : "keybind_fps_cap_45_desc",
+		"script_path" : "lua/fps_cap_45.lua",
+		"run_in_menu" : true,
+		"run_in_game" : true,
+		"localized" : true
+	},
+	{
+		"keybind_id" : "fps_cap_60",
+		"name" : "keybind_fps_cap_60_name",
+		"description" : "keybind_fps_cap_60_desc",
+		"script_path" : "lua/fps_cap_60.lua",
+		"run_in_menu" : true,
+		"run_in_game" : true,
+		"localized" : true
+	},
+	{
+		"keybind_id" : "fps_cap_144",
+		"name" : "keybind_fps_cap_144_name",
+		"description" : "keybind_fps_cap_144_desc",
+		"script_path" : "lua/fps_cap_144.lua",
+		"run_in_menu" : true,
+		"run_in_game" : true,
+		"localized" : true
+	},
+	{
+		"keybind_id" : "fps_cap_unlim",
+		"name" : "keybind_fps_cap_unlim_name",
+		"description" : "keybind_fps_cap_unlim_desc",
+		"script_path" : "lua/fps_cap_unlim.lua",
+		"run_in_menu" : true,
+		"run_in_game" : true,
+		"localized" : true
+	}
+	]
+}

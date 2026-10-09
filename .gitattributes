@@ -1,0 +1,10 @@
+
+# Fins de ligne cohérentes dans le dépôt
+* text=auto eol=lf
+
+# Fichiers texte du mod
+*.lua text eol=lf
+*.txt text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.xml text eol=lf

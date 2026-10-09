@@ -1,0 +1,115 @@
+{
+    "menu_id" : "trigger_vis_options_menu",
+    "parent_menu_id" : "blt_options",
+    "title" : "trigger_vis_options_menu_title",
+    "description" : "trigger_vis_options_menu_desc",
+    "back_callback" : "trigger_vis_options_save",
+    "items" : [
+        {
+            "type" : "multiple_choice",
+            "id" : "localization_language",
+            "title" : "hvt_language_title",
+            "description" : "hvt_language_desc",
+            "callback" : "hvt_options_set_language",
+            "items" : [
+                "hvt_language_auto",
+                "hvt_language_english",
+                "hvt_language_french"
+            ],
+            "value" : "localization_language"
+        },
+        {
+            "type" : "toggle",
+            "id" : "show_all_zones",
+            "title" : "trigger_vis_show_all_zones_title",
+            "description" : "trigger_vis_show_all_zones_desc",
+            "callback" : "trigger_vis_options_toggle_all_zones",
+            "value" : "show_all_zones"
+        },
+        {
+            "type" : "multiple_choice",
+            "id" : "trigger_vis_chat_mode",
+            "title" : "trigger_vis_chat_mode_title",
+            "description" : "trigger_vis_chat_mode_desc",
+            "callback" : "trigger_vis_options_set_chat_mode",
+            "items" : [
+                "trigger_vis_chat_mode_off",
+                "trigger_vis_chat_mode_useful",
+                "trigger_vis_chat_mode_verbose"
+            ],
+            "value" : "trigger_vis_chat_mode"
+        },
+        {
+            "type" : "multiple_choice",
+            "id" : "trigger_vis_color_choice",
+            "title" : "trigger_vis_runtime_color_title",
+            "description" : "trigger_vis_runtime_color_desc",
+            "callback" : "trigger_vis_options_set_trigger_color",
+            "items" : [
+                "trigger_vis_palette_red",
+                "trigger_vis_palette_green",
+                "trigger_vis_palette_blue",
+                "trigger_vis_palette_cyan",
+                "trigger_vis_palette_purple",
+                "trigger_vis_palette_white"
+            ],
+            "value" : "trigger_vis_color_choice"
+        },
+        {
+            "type" : "multiple_choice",
+            "id" : "down",
+            "title" : "trigger_vis_slowmotion_title",
+            "description" : "trigger_vis_slowmotion_desc",
+            "callback" : "trigger_vis_options_set_slowmotion",
+            "items" : [
+                "trigger_vis_slowmotion_on",
+                "trigger_vis_slowmotion_off"
+            ],
+            "value" : "down"
+        },
+        {
+            "type" : "toggle",
+            "id" : "auto_buy_death_sentence",
+            "title" : "hvt_auto_buy_ds_title",
+            "description" : "hvt_auto_buy_ds_desc",
+            "callback" : "hvt_options_toggle_auto_buy_death_sentence",
+            "value" : "auto_buy_death_sentence"
+        },
+        {
+            "type" : "toggle",
+            "id" : "auto_skip_end_screen",
+            "title" : "hvt_auto_skip_end_screen_title",
+            "description" : "hvt_auto_skip_end_screen_desc",
+            "callback" : "hvt_options_toggle_auto_skip_end_screen",
+            "value" : "auto_skip_end_screen"
+        },
+        {
+            "type" : "toggle",
+            "id" : "fun_map_names_enabled",
+            "title" : "hvt_fun_map_names_title",
+            "description" : "hvt_fun_map_names_desc",
+            "callback" : "hvt_options_toggle_fun_map_names",
+            "value" : "fun_map_names_enabled"
+        },
+        {
+            "type" : "divider",
+            "size" : 16
+        },
+        {
+            "type" : "multiple_choice",
+            "id" : "draw_color_choice",
+            "title" : "trigger_vis_draw_color_title",
+            "description" : "trigger_vis_draw_color_desc",
+            "callback" : "trigger_vis_options_set_draw_color",
+            "items" : [
+                "trigger_vis_palette_red",
+                "trigger_vis_palette_green",
+                "trigger_vis_palette_blue",
+                "trigger_vis_palette_cyan",
+                "trigger_vis_palette_purple",
+                "trigger_vis_palette_white"
+            ],
+            "value" : "draw_color_choice"
+        }
+    ]
+}
